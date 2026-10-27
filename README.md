@@ -44,6 +44,10 @@ python -m http.server 8000
 
 Open `http://localhost:8000`. Node.js LTS is required; no paid backend.
 
+## Public examples of content and communication
+
+The candidate also supplied five earlier published Instagram/YouTube examples, curated separately from Codex engineering evidence. [**View the creator's portfolio and public content links**](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html).
+
 ## For reviewers and learners
 
 - [Detailed, source-scoped case study](docs/CASE_STUDY_FOR_REVIEWERS.md)
