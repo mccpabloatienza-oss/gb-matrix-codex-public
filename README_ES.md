@@ -2,7 +2,7 @@
 
 *Del conocimiento empresarial a una herramienta de decisión y, después, a una evolución técnica verificable con Codex.*
 
-Pablo Atienza, profesional de marketing e inteligencia comercial con más de 25 años de experiencia, dirigió el desarrollo de **GB Matrix** utilizando ChatGPT. El artefacto original reúne tracción de demanda (ITD), relevancia de inventario (IRI), modelos alternativos sometidos a revisión y backtesting, conciliación de fuentes, filtros, fichas de producto y vistas tabulares. También incorpora una decisión empresarial real: **el SKU individual y la familia comercial son identidades complementarias**. Posteriormente, Codex desarrolló una demostración pública independiente con 800 productos enteramente ficticios, 12 períodos, JavaScript modular, actualización CSV, 13 pruebas aprobadas, CI y commits auditables. La propuesta educativa es enseñar a profesionales de negocios a dirigir, comprobar y mantener software con Codex. La herramienta de producción y la demo pública son sistemas separados.
+Pablo Atienza, profesional de marketing e inteligencia comercial con más de 25 años de experiencia, dirigió el desarrollo de **GB Matrix** utilizando ChatGPT. El artefacto original reúne tracción de demanda (ITD), relevancia de inventario (IRI), modelos alternativos sometidos a revisión y backtesting, conciliación de fuentes, filtros, fichas de producto y vistas tabulares. También incorpora una decisión empresarial real: **el SKU individual y la familia comercial son identidades complementarias**. Posteriormente, Codex desarrolló una demostración pública independiente con 800 productos enteramente ficticios, 12 períodos, JavaScript modular, actualización CSV, 15 pruebas aprobadas, CI y commits auditables. La propuesta educativa es enseñar a profesionales de negocios a dirigir, comprobar y mantener software con Codex. La herramienta de producción y la demo pública son sistemas separados.
 
 [Demo pública](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Caso para evaluadores](docs/CASE_STUDY_FOR_REVIEWERS.md) · [Pruebas CI](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546) · [Video](https://www.youtube.com/shorts/JTkRiMG96o4)
 
@@ -13,7 +13,7 @@ Pablo Atienza, profesional de marketing e inteligencia comercial con más de 25 
 - Analizar demanda e inventario mediante un mapa ITD × IRI, cuadrantes, filtros, historia y detalle.
 - Generar datos ficticios reproducibles y validar datos erróneos.
 - Simular una actualización mensual CSV con nuevos períodos y snapshots locales.
-- Inspeccionar código modular y 13 pruebas que se ejecutan con `npm test`.
+- Inspeccionar código modular y 15 pruebas que se ejecutan con `npm test`.
 - Reconocer qué aportó la experiencia humana y qué implementó Codex.
 
 ## Una decisión de negocio implementada en el artefacto original
