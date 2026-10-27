@@ -1,42 +1,48 @@
-# The Business Expert, Unlocked
+# GB Matrix (Matriz GB) — The Business Expert, Unlocked
 
-*De ChatGPT a Codex: construir y mantener analítica de negocios sin formación profesional en desarrollo.*
+*Del conocimiento empresarial a una herramienta de decisión y, después, a una evolución técnica verificable con Codex.*
 
-Este repositorio es una demostración independiente y segura del concepto Matriz GB. La herramienta original fue concebida con ChatGPT Plus a partir del conocimiento profesional del autor. Este proyecto no atribuye a Codex la creación inicial: documenta el trabajo posterior de modularización, generación reproducible de datos sintéticos, validación, pruebas y mantenimiento.
+Pablo Atienza, profesional de marketing e inteligencia comercial con más de 25 años de experiencia, dirigió el desarrollo de **GB Matrix** utilizando ChatGPT. El artefacto original reúne tracción de demanda (ITD), relevancia de inventario (IRI), modelos alternativos sometidos a revisión y backtesting, conciliación de fuentes, filtros, fichas de producto y vistas tabulares. También incorpora una decisión empresarial real: **el SKU individual y la familia comercial son identidades complementarias**. Posteriormente, Codex desarrolló una demostración pública independiente con 800 productos enteramente ficticios, 12 períodos, JavaScript modular, actualización CSV, 13 pruebas aprobadas, CI y commits auditables. La propuesta educativa es enseñar a profesionales de negocios a dirigir, comprobar y mantener software con Codex. La herramienta de producción y la demo pública son sistemas separados.
 
-[Demo en vivo](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Repositorio](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public)
+[Demo pública](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Caso para evaluadores](docs/CASE_STUDY_FOR_REVIEWERS.md) · [Pruebas CI](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546) · [Video](https://www.youtube.com/shorts/JTkRiMG96o4)
 
-**ALL DATA IS SYNTHETIC. NO REAL COMMERCIAL RECORDS ARE INCLUDED.** Hay 800 productos ficticios, cinco marcas inventadas, seis categorías genéricas y doce períodos generados desde cero con semilla fija `20261026`.
+**TODOS LOS DATOS DE LA DEMO SON SINTÉTICOS. NO INCLUYE REGISTROS COMERCIALES REALES.** Los indicadores de demostración son fórmulas genéricas, no las fórmulas privadas del sistema original.
 
-## Qué se puede demostrar
+## Qué enseña la demo
 
-- Mapa ITD × IRI con fórmulas genéricas y transparentes.
-- Cuadrantes operativos, filtros y ficha individual.
-- Historial de ventas y stock sintéticos.
-- Actualización mensual CSV simulada con normalización, validaciones, nuevo período y persistencia local de snapshots.
-- Pruebas automatizadas y reproducción local.
+- Analizar demanda e inventario mediante un mapa ITD × IRI, cuadrantes, filtros, historia y detalle.
+- Generar datos ficticios reproducibles y validar datos erróneos.
+- Simular una actualización mensual CSV con nuevos períodos y snapshots locales.
+- Inspeccionar código modular y 13 pruebas que se ejecutan con `npm test`.
+- Reconocer qué aportó la experiencia humana y qué implementó Codex.
 
-Las fórmulas son demostrativas y no representan las fórmulas propietarias de la empresa.
+## Una decisión de negocio implementada en el artefacto original
 
-## Ejecutar
+En una situación empresarial **real, con marcas anonimizadas**:
 
-```powershell
+- **Brand 1** disponía de identificadores más estables para reconocer productos.
+- **Brand 2** requería combinar señales del SKU con título normalizado, modelo y categoría para identificar familias comerciales.
+
+La solución conservó dos escalas: **SKU** para trazabilidad exacta y **familia** para analizar demanda y exposición comercial conjunta. Esa segunda perspectiva se incorporó a una versión histórica privada de GB Matrix y no es una simulación retrospectiva.
+
+**Límite explícito:** la demo pública de Codex todavía **no implementa** la agrupación de familias; Codex sí implementó los módulos sintéticos, CSV, pruebas, documentación y CI. El selector nativo de archivos CSV queda pendiente de comprobación manual desde un navegador; las rutas de parsing y validación cuentan con tests.
+
+## Reproducir
+
+```bash
 npm run generate
 npm test
 npm run check
+node scripts/audit_public_repo.js
 python -m http.server 8000
 ```
 
 Abrir `http://localhost:8000`.
 
-El repositorio fue revisado inicialmente en privado y luego publicado con autorización expresa. GitHub Pages sirve únicamente la demo sintética.
+## Documentación y propuesta educativa
 
-## Human Business Reasoning — From SKU Identity to Commercial Families
+[Bitácora de Codex](CODEX_DEVELOPMENT_LOG.md) · [Decisiones del autor](HUMAN_DECISIONS.md) · [Historial de instrucciones](PROMPT_HISTORY.md) · [Pruebas](TEST_REPORT.md) · [Revisión de publicación](docs/SECURITY_REVIEW.md)
 
-En un ejemplo completamente ficticio, el responsable de negocios detectó que la identidad por SKU no alcanzaba para explicar ciertas familias comerciales. Para **Brand 1** definió una agrupación basada en códigos, títulos normalizados, categorías y modelos; luego contrastó el razonamiento con **Brand 2** para no confundir diferencias de nomenclatura con oportunidades distintas.
+[Primer tutorial propuesto: del problema comercial a una matriz verificada con Codex](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3).
 
-Esta sección documenta el razonamiento humano que motiva una capacidad futura. La demo pública no implementa agrupación de familias comerciales. La herramienta original fue desarrollada con ChatGPT; Codex aportó la demostración modular, sintética, testeada y mantenible.
-
-## Presentación
-
-Video de presentación del autor: [YouTube Shorts](https://www.youtube.com/shorts/JTkRiMG96o4). El video aporta contexto narrativo; la evidencia técnica está en el repositorio.
+**Objetivo:** publicar una demostración o tutorial bilingüe y reproducible por mes para profesionales hispanohablantes que conocen sus negocios y desean ampliar su capacidad técnica.
