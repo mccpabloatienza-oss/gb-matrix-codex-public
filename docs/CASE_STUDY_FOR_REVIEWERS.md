@@ -58,7 +58,7 @@ The Codex project creates an independent, public demonstration rather than repub
 
 ## Previous public-facing content
 
-Five applicant-supplied Instagram and YouTube examples are collected in the [public creator portfolio](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html). These samples document public-content experience and are not presented as previous Codex tutorials; external-media metadata have not been independently verified.
+Six applicant-supplied Instagram and YouTube examples are collected in the [public creator portfolio](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html). These samples document public-content experience and are not presented as previous Codex tutorials; external-media metadata have not been independently verified.
 
 ## Links
 
