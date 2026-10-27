@@ -41,7 +41,7 @@ Abrir `http://localhost:8000`.
 
 ## Contenido público anterior
 
-El candidato aportó cinco publicaciones anteriores de Instagram y YouTube. Se presentan como muestras de comunicación pública, separadas de las pruebas técnicas de Codex: [**Portfolio de contenido**](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html).
+El candidato aportó seis publicaciones anteriores de Instagram y YouTube. Se presentan como muestras de comunicación pública, separadas de las pruebas técnicas de Codex: [**Portfolio de contenido**](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html).
 
 ## Documentación y propuesta educativa
 
