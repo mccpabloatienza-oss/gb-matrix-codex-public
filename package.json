@@ -7,6 +7,6 @@
   "scripts": {
     "generate": "node scripts/generate_demo_data.js",
     "test": "node --test tests/*.test.js",
-    "check": "node --check src/core/indicators.js && node --check src/data/demo_loader.js && node --check src/file_import.js && node --check src/update_flow.js && node --check src/app.js"
+    "check": "node --check src/core/safe_html.js && node --check src/core/indicators.js && node --check src/data/demo_loader.js && node --check src/file_import.js && node --check src/update_flow.js && node --check src/app.js"
   }
 }
