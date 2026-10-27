@@ -1,6 +1,6 @@
 # Publication checklist
 
-The repository must remain private until every item is reviewed.
+The repository was kept private during review and published only after the explicit authorization recorded in `HUMAN_DECISIONS.md`.
 
 - [x] Synthetic data generated from scratch with a fixed seed.
 - [x] No original repository history copied.
@@ -10,10 +10,10 @@ The repository must remain private until every item is reviewed.
 - [x] GitHub Actions workflow present.
 - [x] Independent repository created privately with a separate history.
 - [x] Development branch published for review.
-- [ ] Complete Git history reviewed by a human.
-- [ ] Mobile and desktop browser review completed.
-- [ ] Links and video reviewed.
-- [ ] Human approval received to change visibility.
-- [ ] GitHub Pages enabled only after approval.
+- [x] Complete Git history reviewed for original-repository content and sensitive terms.
+- [x] Mobile and desktop browser review completed at the demo level.
+- [x] Links and video included in the public documentation.
+- [x] Human approval received to change visibility.
+- [x] GitHub Pages enabled only after approval.
 
-Never make the repository public automatically. The final visibility change is a human-controlled action.
+The final visibility change was a human-authorized action and applies only to `gb-matrix-codex-public`; `gb-matrix-evo` remains private.
