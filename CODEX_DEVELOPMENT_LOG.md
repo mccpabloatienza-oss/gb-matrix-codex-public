@@ -16,3 +16,12 @@
 - Final release review: 13 commits audited for isolated history and sensitive content; local tests, syntax checks and the 34-file audit passed. The owner then authorized publication of this repository only; `gb-matrix-evo` was not changed.
 
 This log records work performed in this project. It does not claim that Codex created the original commercial Matriz GB.
+
+## 2026-10-27 — Public narrative and input-rendering hardening
+
+- Updated the public case, README in both languages, human decision provenance and prompt-scope documentation. Described Brand 1 / Brand 2 as anonymized real-world reasoning from the historical private artifact, while keeping family grouping out of the synthetic demo's implemented feature list.
+- Corrected CSV-derived product names, categories, brands and labels rendered into HTML templates by adding a display escaping utility.
+- Added two regression tests for imported HTML-like display strings.
+- [GitHub Actions run 28](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40451410979) confirmed **15 tests passed, 0 failed**; syntax checks passed; a custom audit reported **38 files with zero pattern findings**.
+- Created [Tutorial 01 issue](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3) as planned content, and [QA issue](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/4) for the native CSV UI check.
+- The private commercial tool remains separate. The demo is public and uses wholly synthetic data.
