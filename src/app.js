@@ -1,8 +1,9 @@
 import { loadDemoData } from "./data/demo_loader.js";
 import { scoreProducts, validateRows } from "./core/indicators.js";
 import { parseCsv } from "./file_import.js";
+import { applyMonthlyUpdate, saveSnapshot } from "./update_flow.js";
 
-const state = { data: null, periodIndex: 11, selectedCode: null, scores: [] };
+const state = { data: null, periodIndex: 11, selectedCode: null, scores: [], pendingRows: null };
 const $ = (selector) => document.querySelector(selector);
 
 function money(value) { return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value); }
@@ -59,7 +60,8 @@ function bind() {
   $("#period").addEventListener("input", (event) => { state.periodIndex = Number(event.target.value); render(); });
   $("#validate").addEventListener("click", () => { const sample = state.data.products.slice(0, 20).map((product) => ({ code: product.code, ...product.history.at(-1), unitValue: product.unitValue })); const result = validateRows(sample); $("#validation").textContent = `Validation passed: ${result.rows} rows checked, ${result.errors.length} errors, ${result.warnings.length} warnings.`; });
   $("#simulate").addEventListener("click", () => { const sample = [{ code: "SYN-IMPORT-001", units: 12, stock: 30, unitValue: 55 }, { code: "SYN-IMPORT-001", units: -2, stock: 30, unitValue: 55 }, { code: "", units: 2, stock: null, unitValue: 55 }]; const result = validateRows(sample); $("#validation").textContent = `Demo import rejected as expected: ${result.errors.length} errors and ${result.warnings.length} warnings. No snapshot was changed.`; });
-  $("#csv-file").addEventListener("change", async (event) => { const file = event.target.files[0]; if (!file) return; const rows = parseCsv(await file.text()); const result = validateRows(rows); $("#validation").textContent = `Import checked: ${result.rows} rows, ${result.errors.length} errors, ${result.warnings.length} warnings. Synthetic history is preserved until an update is accepted.`; });
+  $("#csv-file").addEventListener("change", async (event) => { const file = event.target.files[0]; if (!file) return; const rows = parseCsv(await file.text()); const result = validateRows(rows); state.pendingRows = result.valid ? rows : null; $("#apply-update").disabled = !result.valid; $("#validation").textContent = `Import checked: ${result.rows} rows, ${result.errors.length} errors, ${result.warnings.length} warnings.${result.valid ? " Ready to apply a new synthetic period." : " Update rejected; no snapshot was changed."}`; });
+  $("#apply-update").addEventListener("click", () => { if (!state.pendingRows) return; const result = applyMonthlyUpdate(state.data, state.pendingRows); if (!result.ok) { $("#validation").textContent = `Update rejected: ${result.validation.errors.length} errors. No snapshot was changed.`; return; } state.data = result.snapshot; state.periodIndex = state.data.periods.length - 1; saveSnapshot(state.data); $("#period").max = state.data.periods.length - 1; $("#period").value = state.periodIndex; $("#period-label").textContent = state.data.periods.at(-1); $("#apply-update").disabled = true; $("#validation").textContent = `Update applied: ${result.summary.updated} updated, ${result.summary.added} added, ${result.summary.preserved} preserved. Snapshot saved for ${result.summary.period}.`; render(); });
 }
 
 loadDemoData().then((data) => { state.data = data; renderOptions("#brand", data.brands, "All brands"); renderOptions("#category", data.categories, "All categories"); $("#period").max = data.periods.length - 1; $("#period-label").textContent = data.periods.at(-1); bind(); render(); }).catch((error) => { $("#status").textContent = error.message; });

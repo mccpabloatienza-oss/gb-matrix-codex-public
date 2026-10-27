@@ -13,7 +13,7 @@ This repository is an independent, public-demo candidate for the GB Matrix conce
 - A transparent, generic ITD demand-traction score and IRI inventory-relevance score.
 - A normalized ITD × IRI scatterplot and four operating quadrants.
 - Filters, product detail, historical demand/stock and review candidates.
-- A simulated monthly import with understandable validation errors.
+- A simulated monthly CSV update with understandable validation errors, normalization, period append and local snapshot persistence.
 - Reproducible synthetic data, modular source code and automated tests.
 
 The formulas here are demonstrations. They are not claimed to be the company's proprietary production formulas.

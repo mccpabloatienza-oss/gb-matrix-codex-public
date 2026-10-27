@@ -11,7 +11,7 @@ Este repositorio es una demostración independiente y segura del concepto Matriz
 - Mapa ITD × IRI con fórmulas genéricas y transparentes.
 - Cuadrantes operativos, filtros y ficha individual.
 - Historial de ventas y stock sintéticos.
-- Simulación de importación mensual y validaciones.
+- Actualización mensual CSV simulada con normalización, validaciones, nuevo período y persistencia local de snapshots.
 - Pruebas automatizadas y reproducción local.
 
 Las fórmulas son demostrativas y no representan las fórmulas propietarias de la empresa.
