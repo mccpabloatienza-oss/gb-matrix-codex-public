@@ -2,7 +2,7 @@
 
 *Del conocimiento empresarial a una herramienta de decisión y, después, a una evolución técnica verificable con Codex.*
 
-Pablo Atienza, profesional de marketing e inteligencia comercial con más de 25 años de experiencia, dirigió el desarrollo de **GB Matrix** utilizando ChatGPT. El artefacto original reúne tracción de demanda (ITD), relevancia de inventario (IRI), modelos alternativos sometidos a revisión y backtesting, conciliación de fuentes, filtros, fichas de producto y vistas tabulares. También incorpora una decisión empresarial real: **el SKU individual y la familia comercial son identidades complementarias**. Posteriormente, Codex desarrolló una demostración pública independiente con 800 productos enteramente ficticios, 12 períodos, JavaScript modular, actualización CSV, 15 pruebas aprobadas, CI y commits auditables. La propuesta educativa es enseñar a profesionales de negocios a dirigir, comprobar y mantener software con Codex. La herramienta de producción y la demo pública son sistemas separados.
+Pablo Atienza, profesional de marketing e inteligencia comercial con más de 25 años de experiencia, dirigió el desarrollo de **GB Matrix** utilizando ChatGPT. El artefacto original reúne tracción de demanda (ITD), relevancia de inventario (IRI), modelos alternativos sometidos a revisión y backtesting, conciliación de fuentes, filtros, fichas de producto y vistas tabulares. También incorpora una decisión empresarial real: **el SKU individual y la familia comercial son identidades complementarias**. Posteriormente, Codex desarrolló una demostración pública independiente con 800 productos enteramente ficticios, 12 períodos, JavaScript modular, actualización CSV, 15 pruebas aprobadas, CI y commits auditables. Ya está publicado el Tutorial 01 bilingüe y la propuesta educativa es enseñar a profesionales de negocios a dirigir, comprobar y mantener software con Codex. La herramienta de producción y la demo pública son sistemas separados.
 
 [Demo pública](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Caso ejecutivo HTML](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/case-study.html) · [Caso completo](docs/CASE_STUDY_FOR_REVIEWERS.md) · [Pruebas CI](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546) · [Video](https://www.youtube.com/shorts/JTkRiMG96o4)
 
@@ -43,6 +43,6 @@ Abrir `http://localhost:8000`.
 
 [Bitácora de Codex](CODEX_DEVELOPMENT_LOG.md) · [Decisiones del autor](HUMAN_DECISIONS.md) · [Historial de instrucciones](PROMPT_HISTORY.md) · [Pruebas](TEST_REPORT.md) · [Revisión de publicación](docs/SECURITY_REVIEW.md)
 
-[Primer tutorial propuesto: del problema comercial a una matriz verificada con Codex](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3).
+[Tutorial 01 publicado: de una pregunta comercial a una matriz verificada con Codex](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/tutorial-01.html) · [Historial editorial](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3).
 
 **Objetivo:** publicar una demostración o tutorial bilingüe y reproducible por mes para profesionales hispanohablantes que conocen sus negocios y desean ampliar su capacidad técnica.
