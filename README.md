@@ -1,66 +1,58 @@
-# The Business Expert, Unlocked
+# GB Matrix (Matriz GB) — The Business Expert, Unlocked
 
-*From ChatGPT to Codex: Building and Maintaining Business Analytics Without a Software Engineering Background.*
+*From business expertise to a working decision system, then to verifiable Codex-assisted engineering.*
 
-[![Open live demo](https://img.shields.io/badge/Live%20demo-GitHub%20Pages-0f766e)](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/)
+Pablo Atienza is a marketing and business-intelligence professional in Argentina with 25+ years of experience. Using ChatGPT, he directed the creation of **GB Matrix**, an operational approach to prioritizing a multi-brand product portfolio. The original artifact combines demand traction (ITD), inventory relevance (IRI), reviewable product-level evidence, filters, drill-down and tabular views, model comparison, backtesting, and source reconciliation. His domain decisions also established **two complementary scopes: exact SKU records and normalized commercial product families**. Codex subsequently created an **independent, public and testable demonstration** of the concept: 800 entirely synthetic products, 12 periods, modular JavaScript, a CSV update flow, 13 passing tests, GitHub Actions, a reviewed pull request and a traceable development history. The planned bilingual teaching series shows business experts how to direct, test and maintain software with Codex. The commercial tool and synthetic demonstration are separate implementations.
 
-![GB Matrix synthetic demo preview](docs/demo-preview.svg)
+[**Open live demo**](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [**Case study**](docs/CASE_STUDY_FOR_REVIEWERS.md) · [**CI run**](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546) · [**PR #2**](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2) · [**Intro video**](https://www.youtube.com/shorts/JTkRiMG96o4)
 
-This repository is an independent public demonstration of the GB Matrix concept. It explains how a business professional can direct the evolution of an analytical workflow through domain questions, explicit technical constraints, synthetic data, tests and evidence.
-
-## Important safety statement
-
-**ALL DATA IS SYNTHETIC. NO REAL COMMERCIAL RECORDS ARE INCLUDED.** The dataset is generated from scratch with seed `20261026`. It contains 800 fictitious products, five invented brands, six generic categories and twelve synthetic periods. Do not add the original matrix, commercial exports, customer information, prices, costs or internal paths.
+![Synthetic GB Matrix demo preview](docs/demo-preview.svg)
 
 ## Evidence at a glance
 
-| Evidence | Result | Reproduction or link |
-| --- | --- | --- |
-| Automated tests | 13 passed (the initial 9 plus 4 update-flow tests) | `npm test` |
-| Syntax check | Passed | `npm run check` |
-| Public-repository audit | 31 files scanned, 0 findings | `node scripts/audit_public_repo.js` |
-| GitHub Actions | Passing on `main` and pull requests | [Successful `main` run](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546) |
-| Live application | Published synthetic demo | [Open the demo](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Pages deploy](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413496) |
+| Auditable Codex demo evidence | Recorded result | Where to verify |
+|---|---|---|
+| Synthetic portfolio | 800 invented products; 5 fictional brands; 6 generic categories; 12 periods; fixed seed `20261026` | `scripts/generate_demo_data.js` |
+| Automated tests | 13 passing tests | `npm test`; [successful CI](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546) |
+| Source and maintenance | Modular JS, CSV parsing and update flow, validation, period append and local snapshots | `src/`, `tests/`, `TEST_REPORT.md` |
+| Source review | PR #2, commits, development log, recorded owner decisions | [PR #2](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2) · [commits on main](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/commits/main/) |
+| Repository audit | Custom audit script; **34 files / 0 findings** in the recorded final release check | `scripts/audit_public_repo.js` and PR #2 |
+| Publication | GitHub Pages deploy and public repository | [Live demo](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) |
 
-## What this demonstrates
+**ALL DEMO DATA IS SYNTHETIC. NO REAL COMMERCIAL RECORDS ARE INCLUDED.** The demonstration's ITD/IRI formulas are generic and are not the original company's production formulas. The historical enterprise artifact and its data remain private.
 
-- A transparent, generic ITD demand-traction score and IRI inventory-relevance score.
-- A normalized ITD × IRI scatterplot and four operating quadrants.
-- Filters, product detail, historical demand/stock and review candidates.
-- A simulated monthly CSV update with understandable validation errors, normalization, period append and local snapshot persistence.
-- Reproducible synthetic data, modular source code and automated tests.
+## What the working concept demonstrates
 
-The formulas here are demonstrations. They are not claimed to be the company's proprietary production formulas.
+- **From scattered data to decisions:** ITD × IRI positions products; quadrants help prioritize attention, and drill-down, tables and supporting evidence explain why.
+- **Methodological review:** candidate demand and inventory indicators were compared, backtested and revised; uncertain classifications and differences between sources were surfaced rather than silently guessed away.
+- **Human judgment translated into an artifact:** in the historical tool, an actual business problem required combining exact identifiers with normalized titles, models and categories to create a second, family-level view. **Brand 1 and Brand 2 are anonymized real-world contexts**, not invented case histories.
+- **Codex contribution:** modular synthetic implementation, reproducible generation, validation, a monthly CSV workflow, a test suite and CI. Codex is **not** credited with building the original ChatGPT-developed tool.
 
-## Run locally
+**Boundary:** commercial-family grouping exists in the private historical artifact; it is documented as a design decision here and is **not implemented in the public synthetic demo**. The demo's CSV upload via the native browser chooser requires a separate manual UI check; parser and update logic are covered by automated tests.
 
-```powershell
+## Run and reproduce
+
+```bash
 npm run generate
 npm test
 npm run check
+node scripts/audit_public_repo.js
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000`. The browser must use a local HTTP server because the demo loads JSON as a module asset.
+Open `http://localhost:8000`. Node.js LTS is required; no paid backend.
 
-## Story
+## For reviewers and learners
 
-Business Expert → ChatGPT → Complex Workflows → Codex + GitHub → Continuous Improvement
+- [Detailed, source-scoped case study](docs/CASE_STUDY_FOR_REVIEWERS.md)
+- [README en español](README_ES.md)
+- [Codex development record](CODEX_DEVELOPMENT_LOG.md)
+- [Recorded human decisions](HUMAN_DECISIONS.md)
+- [Prompt history and scope](PROMPT_HISTORY.md)
+- [Before and after](BEFORE_AND_AFTER.md)
+- [Test report](TEST_REPORT.md)
+- [Reproduction](docs/REPRODUCE.md)
+- [Recorded security review](docs/SECURITY_REVIEW.md)
+- [Tutorial 01 — editorial brief (planned)](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3)
 
-ChatGPT helped the author create the first business tool from professional knowledge. Codex contributes here to modularization, reproducibility, testing, documentation and maintenance workflows. Codex is not credited with the original tool.
-
-## Human Business Reasoning — From SKU Identity to Commercial Families
-
-In a fictitious business discussion, the owner noticed that SKU identity alone was not enough to explain how some products competed within a family. For **Brand 1**, the analysis grouped records using a stable code, normalized titles, category and model so that similar commercial propositions could be reviewed together. The same reasoning was tested with **Brand 2** to avoid treating naming differences as different business opportunities.
-
-This section documents the human reasoning that motivated a future capability. The public demo does not implement commercial-family grouping and does not claim that this feature was created by Codex. The original analytical concept was developed with ChatGPT; Codex contributed the modular, synthetic, tested and maintainable demonstration in this repository.
-
-## Repository status
-
-This is a new independent repository with its own history. It was reviewed privately first and is now published after the authorized security review. GitHub Pages serves only the synthetic demo.
-
-See [README_ES.md](README_ES.md), [docs/SECURITY_REVIEW.md](docs/SECURITY_REVIEW.md), [docs/REPRODUCE.md](docs/REPRODUCE.md), [CODEX_DEVELOPMENT_LOG.md](CODEX_DEVELOPMENT_LOG.md), [HUMAN_DECISIONS.md](HUMAN_DECISIONS.md) and [BEFORE_AND_AFTER.md](BEFORE_AND_AFTER.md).
-
-## Presentation
-
-The author's introduction video is available at [YouTube Shorts](https://www.youtube.com/shorts/JTkRiMG96o4). The video is a narrative resource; the repository remains the source of technical evidence.
+**Audience:** Spanish-speaking business and marketing experts with deep domain knowledge and limited engineering support. **Content proposal:** one reproducible Spanish/English tutorial or live demonstration per month, based on implemented work and inspectable tests.
