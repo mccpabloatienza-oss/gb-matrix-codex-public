@@ -13,8 +13,8 @@ This checklist consolidates the final reviewer feedback for the public **GB Matr
 
 ## Still awaiting independent verification
 - Complete manual CSV chooser/import/apply/update test in a browser, plus responsive review and malicious-label UI test; see [QA issue #4](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/4).
-- Successful CI rerun on the current post-hardening state, before claiming 15 tests as confirmed.
-- Updated audit of the latest repository tree/history; published figures refer to pre-release checks.
+- **Completed:** [CI run 28](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40451410979) confirmed 15 tests passed and the custom audit scanned 38 files with zero pattern findings.
+- Manual UI testing and an independent security review remain separate tasks.
 
 ## Boundaries
 - No company permission letter is part of the public submission packet. Public content uses synthetic data and generalized historical claims.
