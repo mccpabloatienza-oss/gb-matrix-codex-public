@@ -4,7 +4,7 @@
 
 ## Executive summary (for reviewers)
 
-Pablo Atienza, an Argentine marketing and business-intelligence professional with 25+ years of experience, directed the creation of **GB Matrix**, a working multi-brand portfolio decision artifact with ChatGPT. Its original implementation combines demand traction (ITD), inventory relevance (IRI), alternative-model comparison, backtesting, source reconciliation, detailed product views and complementary SKU/family-level analysis. One consequential human decision—using identifiers together with normalized product descriptions to define commercially meaningful families—became a second view in the private artifact. Codex subsequently built a **separate, public, reproducible implementation** using 800 synthetic products, 12 periods, modular JavaScript, CSV updates, **15 passing tests**, a successful CI pipeline, reviewable commits and a pull request. The Content Path proposal is a monthly Spanish/English series showing how business experts can direct, verify and maintain software, with technical results anyone can inspect.
+Pablo Atienza, an Argentine marketing and business-intelligence professional with 25+ years of experience, directed the creation of **GB Matrix**, a working multi-brand portfolio decision artifact with ChatGPT. Its original implementation combines demand traction (ITD), inventory relevance (IRI), alternative-model comparison, backtesting, source reconciliation, detailed product views and complementary SKU/family-level analysis. One consequential human decision—using identifiers together with normalized product descriptions to define commercially meaningful families—became a second view in the private artifact. Codex subsequently built a **separate, public, reproducible implementation** using 800 synthetic products, 12 periods, modular JavaScript, CSV updates, **15 passing tests**, a successful CI pipeline, reviewable commits and a pull request. The Content Path contribution begins with a published bilingual tutorial and proposes a monthly Spanish/English series showing how business experts can direct, verify and maintain software, with technical results anyone can inspect.
 
 ## 1. The artifact: the business problem and system
 
@@ -46,7 +46,7 @@ The Codex project creates an independent, public demonstration rather than repub
 | Codex created an independent reproducible synthetic project | [Public repository](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public), [PR #2](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2) | Publicly auditable |
 | Test suite and CI passed | [Successful Actions run](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40451410979), [test report](../TEST_REPORT.md) | CI success; 13 tests documented |
 | Demonstration is published | [Live GitHub Pages](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) | Public |
-| Monthly educational contribution | [Tutorial 01 brief](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3) | Planned; not yet published |
+| Monthly educational contribution | [Published Tutorial 01](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/tutorial-01.html) | Publicly published HTML; browser path subject to Pages deployment |
 
 ## 5. Content Path: audience and first contribution
 
@@ -54,7 +54,7 @@ The Codex project creates an independent, public demonstration rather than repub
 
 **Monthly commitment proposal:** one Spanish/English tutorial, demonstration or case study built on real, inspectable Codex workflows and reusable assets.
 
-**Tutorial 01:** *From a Business Question to a Tested GB Matrix Demo with Codex*. [Editorial issue and acceptance checklist](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3). It will show: framing a business question, choosing useful indicators, generating safe data, requesting modular changes, running tests, recording decisions and sharing a reproducible demo. **Status: proposed content, not an already published tutorial.**
+**Tutorial 01:** *From a Business Question to a Tested GB Matrix Demo with Codex*. [Read the published bilingual tutorial](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/tutorial-01.html), with its [editorial issue](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3). It explains framing a business question, choosing useful indicators, generating safe data, requesting modular changes, running tests, recording decisions and sharing a reproducible demo. **Status: content authored and committed to the public repository.**
 
 ## Links
 
