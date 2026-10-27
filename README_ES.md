@@ -39,6 +39,10 @@ python -m http.server 8000
 
 Abrir `http://localhost:8000`.
 
+## Contenido público anterior
+
+El candidato aportó cinco publicaciones anteriores de Instagram y YouTube. Se presentan como muestras de comunicación pública, separadas de las pruebas técnicas de Codex: [**Portfolio de contenido**](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html).
+
 ## Documentación y propuesta educativa
 
 [Bitácora de Codex](CODEX_DEVELOPMENT_LOG.md) · [Decisiones del autor](HUMAN_DECISIONS.md) · [Historial de instrucciones](PROMPT_HISTORY.md) · [Pruebas](TEST_REPORT.md) · [Revisión de publicación](docs/SECURITY_REVIEW.md)
