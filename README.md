@@ -19,8 +19,8 @@ This repository is an independent public demonstration of the GB Matrix concept.
 | Automated tests | 13 passed (the initial 9 plus 4 update-flow tests) | `npm test` |
 | Syntax check | Passed | `npm run check` |
 | Public-repository audit | 31 files scanned, 0 findings | `node scripts/audit_public_repo.js` |
-| GitHub Actions | Passing on `main` and pull requests | [Actions](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions) |
-| Live application | Published synthetic demo | [Open the demo](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) |
+| GitHub Actions | Passing on `main` and pull requests | [Successful `main` run](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546) |
+| Live application | Published synthetic demo | [Open the demo](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Pages deploy](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413496) |
 
 ## What this demonstrates
 
