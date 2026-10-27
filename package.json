@@ -1,0 +1,12 @@
+{
+  "name": "gb-matrix-codex-public",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A reproducible synthetic public demonstration of the GB Matrix concept.",
+  "scripts": {
+    "generate": "node scripts/generate_demo_data.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/core/indicators.js && node --check src/data/demo_loader.js && node --check src/file_import.js && node --check src/app.js"
+  }
+}
