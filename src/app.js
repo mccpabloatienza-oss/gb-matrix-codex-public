@@ -2,6 +2,7 @@ import { loadDemoData } from "./data/demo_loader.js";
 import { scoreProducts, validateRows } from "./core/indicators.js";
 import { parseCsv } from "./file_import.js";
 import { applyMonthlyUpdate, saveSnapshot } from "./update_flow.js";
+import { escapeHtml } from "./core/safe_html.js";
 
 const state = { data: null, periodIndex: 11, selectedCode: null, scores: [], pendingRows: null };
 const $ = (selector) => document.querySelector(selector);
@@ -9,7 +10,7 @@ const $ = (selector) => document.querySelector(selector);
 function money(value) { return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value); }
 
 function renderOptions(selector, values, allLabel) {
-  $(selector).innerHTML = `<option value="">${allLabel}</option>${values.map((value) => `<option>${value}</option>`).join("")}`;
+  $(selector).innerHTML = `<option value="">${escapeHtml(allLabel)}</option>${values.map((value) => `<option>${escapeHtml(value)}</option>`).join("")}`;
 }
 
 function filteredScores() {
@@ -22,7 +23,7 @@ function filteredScores() {
 function renderKpis(rows) {
   const review = rows.filter((row) => row.quadrant.key === "develop" || row.quadrant.key === "tail").length;
   const stock = rows.reduce((sum, row) => sum + (row.latest?.stock ?? 0), 0);
-  $("#kpis").innerHTML = `<article><span>Products shown</span><strong>${rows.length}</strong></article><article><span>Stock units</span><strong>${stock.toLocaleString()}</strong></article><article><span>Need review</span><strong>${review}</strong></article><article><span>Period</span><strong>${state.data.periods[state.periodIndex]}</strong></article>`;
+  $("#kpis").innerHTML = `<article><span>Products shown</span><strong>${rows.length}</strong></article><article><span>Stock units</span><strong>${stock.toLocaleString()}</strong></article><article><span>Need review</span><strong>${review}</strong></article><article><span>Period</span><strong>${escapeHtml(state.data.periods[state.periodIndex])}</strong></article>`;
 }
 
 function renderScatter(rows) {
@@ -42,14 +43,14 @@ function renderScatter(rows) {
 }
 
 function renderTable(rows) {
-  $("#rows").innerHTML = rows.slice(0, 40).map((row) => `<tr data-code="${row.code}"><td><button class="link-button">${row.name}</button><small>${row.code}</small></td><td>${row.brand}</td><td>${row.category}</td><td>${row.itd?.toFixed(1) ?? "—"}</td><td>${row.iri?.toFixed(1) ?? "—"}</td><td><span class="badge ${row.quadrant.key}">${row.quadrant.label}</span></td></tr>`).join("");
+  $("#rows").innerHTML = rows.slice(0, 40).map((row) => `<tr data-code="${escapeHtml(row.code)}"><td><button class="link-button">${escapeHtml(row.name)}</button><small>${escapeHtml(row.code)}</small></td><td>${escapeHtml(row.brand)}</td><td>${escapeHtml(row.category)}</td><td>${row.itd?.toFixed(1) ?? "—"}</td><td>${row.iri?.toFixed(1) ?? "—"}</td><td><span class="badge ${row.quadrant.key}">${row.quadrant.label}</span></td></tr>`).join("");
   document.querySelectorAll("#rows tr").forEach((tr) => tr.addEventListener("click", () => showDetail(tr.dataset.code)));
 }
 
 function showDetail(code) {
   const row = state.scores.find((item) => item.code === code); if (!row) return;
   state.selectedCode = code;
-  $("#detail").innerHTML = `<button id="close-detail" aria-label="Close detail">×</button><p class="eyebrow">PRODUCT DETAIL</p><h2>${row.name}</h2><p>${row.brand} · ${row.category} · ${row.archetype}</p><div class="detail-grid"><div><span>ITD</span><strong>${row.itd?.toFixed(1) ?? "Pending"}</strong></div><div><span>IRI</span><strong>${row.iri?.toFixed(1) ?? "Pending"}</strong></div><div><span>Stock</span><strong>${row.latest.stock}</strong></div><div><span>Unit value</span><strong>${money(row.unitValue)}</strong></div></div><h3>Historical demand and stock</h3><div class="history">${row.history.map((point) => `<div><span>${point.period.slice(5)}</span><b style="height:${Math.min(100, point.units)}%" title="${point.units} units"></b><i style="height:${Math.min(100, point.stock / 3)}%" title="${point.stock} stock"></i></div>`).join("")}</div><p class="interpretation">${row.quadrant.key === "growth" ? "High traction and inventory relevance: a candidate for acceleration." : row.quadrant.key === "develop" ? "Inventory is relevant but demand traction needs development." : row.quadrant.key === "tail" ? "Low observed traction: review availability, assortment or lifecycle." : "Demand traction is visible with a lighter inventory position."}</p>`;
+  $("#detail").innerHTML = `<button id="close-detail" aria-label="Close detail">×</button><p class="eyebrow">PRODUCT DETAIL</p><h2>${escapeHtml(row.name)}</h2><p>${escapeHtml(row.brand)} · ${escapeHtml(row.category)} · ${escapeHtml(row.archetype)}</p><div class="detail-grid"><div><span>ITD</span><strong>${row.itd?.toFixed(1) ?? "Pending"}</strong></div><div><span>IRI</span><strong>${row.iri?.toFixed(1) ?? "Pending"}</strong></div><div><span>Stock</span><strong>${row.latest.stock}</strong></div><div><span>Unit value</span><strong>${money(row.unitValue)}</strong></div></div><h3>Historical demand and stock</h3><div class="history">${row.history.map((point) => `<div><span>${escapeHtml(point.period.slice(5))}</span><b style="height:${Math.min(100, point.units)}%" title="${point.units} units"></b><i style="height:${Math.min(100, point.stock / 3)}%" title="${point.stock} stock"></i></div>`).join("")}</div><p class="interpretation">${row.quadrant.key === "growth" ? "High traction and inventory relevance: a candidate for acceleration." : row.quadrant.key === "develop" ? "Inventory is relevant but demand traction needs development." : row.quadrant.key === "tail" ? "Low observed traction: review availability, assortment or lifecycle." : "Demand traction is visible with a lighter inventory position."}</p>`;
   $("#detail-panel").classList.add("open"); $("#close-detail").addEventListener("click", () => $("#detail-panel").classList.remove("open")); renderScatter(filteredScores());
 }
 
