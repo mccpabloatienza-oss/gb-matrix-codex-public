@@ -8,6 +8,8 @@ The repository must remain private until every item is reviewed.
 - [x] Local tests and syntax checks executed.
 - [x] Security audit script present.
 - [x] GitHub Actions workflow present.
+- [x] Independent repository created privately with a separate history.
+- [x] Development branch published for review.
 - [ ] Complete Git history reviewed by a human.
 - [ ] Mobile and desktop browser review completed.
 - [ ] Links and video reviewed.
