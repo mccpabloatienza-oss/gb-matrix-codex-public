@@ -56,6 +56,10 @@ The Codex project creates an independent, public demonstration rather than repub
 
 **Tutorial 01:** *From a Business Question to a Tested GB Matrix Demo with Codex*. [Read the published bilingual tutorial](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/tutorial-01.html), with its [editorial issue](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3). It explains framing a business question, choosing useful indicators, generating safe data, requesting modular changes, running tests, recording decisions and sharing a reproducible demo. **Status: content authored and committed to the public repository.**
 
+## Previous public-facing content
+
+Five applicant-supplied Instagram and YouTube examples are collected in the [public creator portfolio](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html). These samples document public-content experience and are not presented as previous Codex tutorials; external-media metadata have not been independently verified.
+
 ## Links
 
 [Live demo](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Source](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public) · [PR #2](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2) · [CI](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40451410979) · [YouTube introduction](https://www.youtube.com/shorts/JTkRiMG96o4)
