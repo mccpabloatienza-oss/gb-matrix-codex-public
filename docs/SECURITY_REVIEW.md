@@ -11,7 +11,7 @@ The synthetic demonstration was initially reviewed privately, then published wit
 
 ## Release checks
 
-The pre-publication record documented review of history and a custom repository audit with 34 files and 0 findings. Current edits have added new files: the recorded count is **not a current scan count**.
+The original pre-publication record documented 34 scanned files and 0 findings. The **latest audited workflow** now covers **38 files with 0 pattern findings**, after additional documentation and HTML-escaping tests: [GitHub Actions run 28](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40451410979).
 
 Reproducible checks:
 
@@ -28,7 +28,7 @@ The custom audit tests a constrained set of names, extensions and token patterns
 
 ## Post-release hardening
 
-Imported product text is now escaped before interpolation in interface HTML templates. Two regression tests were added for unsafe markup. Verification of the new CI state and native CSV file upload remains required; see [manual QA issue #4](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/4).
+Imported product text is now escaped before interpolation in interface HTML templates. Two regression tests were added for unsafe markup. The updated CI run passed 15 tests and the 38-file custom audit. Independent native CSV file upload and visual review remain required; see [manual QA issue #4](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/4).
 
 ## Publication policy
 
