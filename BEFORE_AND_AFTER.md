@@ -14,9 +14,8 @@
 - Validation, tests, reproduction instructions and security gates are explicit.
 - The browser demo explains the concept without exposing commercial data.
 
-## Still pending
+## Release state
 
-- Full security review of the complete new Git history.
-- Creation of the independent private GitHub repository.
-- Human approval before visibility changes or GitHub Pages publication.
-- Final mobile/desktop review and GitHub Actions evidence after the remote is connected.
+- The independent repository was created with separate history, reviewed privately, merged into `main` and published after explicit authorization.
+- GitHub Actions and local checks provide reproducible evidence; GitHub Pages serves the synthetic demo.
+- The commercial repository remains private and is not part of this project.

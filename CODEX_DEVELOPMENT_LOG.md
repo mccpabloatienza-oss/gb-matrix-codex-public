@@ -13,6 +13,6 @@
 - The browser file chooser was not exposed to the automation session; direct CSV import remains a manual browser check, while the parser path and validation engine are covered by code and tests.
 - Codex added focused tests for duplicate/missing/negative/out-of-range data, monthly updates, history preservation, new products and snapshots; the suite now has 13 passing tests.
 - GitHub Actions was verified on the current PR head with two successful jobs and no annotations. The browser file chooser is not exposed to this automation session, so selecting a file remains a manual browser check.
-- Pending: human review of complete Git history, mobile/desktop behavior and links, followed by explicit approval before any visibility change or GitHub Pages release.
+- Final release review: 13 commits audited for isolated history and sensitive content; local tests, syntax checks and the 34-file audit passed. The owner then authorized publication of this repository only; `gb-matrix-evo` was not changed.
 
 This log records work performed in this project. It does not claim that Codex created the original commercial Matriz GB.

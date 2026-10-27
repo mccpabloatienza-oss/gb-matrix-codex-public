@@ -13,4 +13,4 @@ The local execution produced 800 products, 12 periods and seed `20261026`. The a
 
 GitHub Actions for PR #2 ran two jobs on head `2be54ce` and both completed successfully with zero annotations.
 
-The independent repository `mccpabloatienza-oss/gb-matrix-codex-public` is now private, with `development` published for review. No public visibility change or GitHub Pages publication has been made.
+The independent repository was reviewed privately, merged into `main`, and then authorized for public release. GitHub Pages is configured to serve the synthetic demo. The commercial repository `gb-matrix-evo` was not changed.
