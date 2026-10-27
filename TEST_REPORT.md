@@ -1,4 +1,15 @@
-# Test report — verified release and latest review
+# Test report — current publicly verified state
+
+## Latest automated verification
+
+[GitHub Actions run 28](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40451410979) completed successfully on 27 October 2026 and includes:
+
+- `npm run generate`: successful, synthetic data generator.
+- `npm test`: **15 passed; 0 failed**, including the two new unsafe-HTML-rendering tests.
+- `npm run check`: successful syntax checking.
+- `node scripts/audit_public_repo.js`: **38 files scanned, 0 findings** according to its custom rule set.
+
+These results are visible in the workflow job log. This custom audit is limited to file extensions, token patterns and selected terms; it does not constitute a comprehensive vulnerability assessment.
 
 ## Reproduce
 
@@ -7,24 +18,15 @@ npm run generate
 npm test
 npm run check
 node scripts/audit_public_repo.js
+python -m http.server 8000
 ```
 
-The published synthetic release generated **800 invented products** across **12 periods** with seed `20261026`. Its recorded CI run completed successfully with **13 passing Node tests** for indicators, quadrants, invalid input, parsing, monthly updating, new-product handling and snapshot behavior. Syntax checks passed.
+Open `http://localhost:8000`. The demonstration contains 800 fictional products across 12 periods, generated with seed `20261026`.
 
-- [Published release — successful GitHub Actions run](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546)
-- [Published release — GitHub Pages deployment](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413496)
-- [Reviewed release changes — PR #2](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2)
+## Manual browser tests outstanding
 
-## Recorded custom repository audit
+Automated parser and update tests passed; the native browser file chooser and click-through CSV import/apply workflow still need a complete independent manual run. The post-release fix escapes strings received from CSV before insertion into HTML templates. [Issue #4](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/4) tracks a real browser test for valid/invalid CSV, malicious-name display and mobile presentation. **Do not claim completed manual end-to-end testing until evidence is attached.**
 
-The final pre-release audit was reported as **34 files, zero pattern-based findings**. An earlier report stating 31 files concerned a prior snapshot. New editorial and hardening commits add files; **re-run the current audit to obtain a new current-file count**. This custom script is a useful narrow safeguard, **not a replacement for a comprehensive secret scanner or manual history review**.
+## Publication and provenance
 
-## Recent input rendering hardening
-
-After release, the product display path was inspected. UI templates previously interpolated product names and categories originating from CSV imports into `innerHTML`. A new `escapeHtml` utility and **two additional regression tests** were added for untrusted display text. That increases the planned test suite from 13 to **15 tests**, pending successful CI confirmation for the new commit state. Until confirmed, the executive case cites **13 previously verified tests**.
-
-## Manual browser QA still pending
-
-Automated tests cover the CSV parser and update logic. The native browser file chooser and the complete CSV import/apply flow **have not yet been verified end-to-end manually**. [QA checklist, including malicious-label rendering and mobile review](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/4).
-
-No private original records, product names, commercial parameters or commercial Git history are published.
+The [original Codex demonstration PR](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2) was reviewed, merged and published with approval. The [final documentation and QA PR](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/5) has also been merged. The original commercial system stays private; no original records or formulas are published here.
