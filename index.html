@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GB Matrix · Synthetic public demo</title><link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <header class="topbar"><div><p class="eyebrow">GB MATRIX · SYNTHETIC PUBLIC DEMO</p><h1>The Business Expert, Unlocked</h1><p class="lede">From business questions to a reproducible ITD × IRI workflow — built and verified with Codex.</p></div><a class="button ghost" href="https://github.com/mccpabloatienza-oss/gb-matrix-codex-public" target="_blank" rel="noreferrer">Repository</a></header>
+  <main>
+    <section class="notice"><strong>ALL DATA IS SYNTHETIC.</strong> This demo contains no real commercial records. ITD and IRI are generic, transparent demonstration indicators.</section>
+    <section class="controls"><label>Brand<select id="brand"></select></label><label>Category<select id="category"></select></label><label>Search<input id="search" placeholder="Code or product"></label><label>Period <span id="period-label"></span><input id="period" type="range" min="0" max="11" value="11"></label></section>
+    <section id="kpis" class="kpis"></section>
+    <section class="hero-grid"><article class="card chart-card"><div class="section-heading"><div><p class="eyebrow">PORTFOLIO MAP</p><h2>ITD × IRI</h2></div><span class="legend"><i class="dot growth"></i>Growth <i class="dot develop"></i>Review <i class="dot tail"></i>Tail</span></div><canvas id="scatter"></canvas><p class="muted">Scores are normalized within the selected synthetic period. They illustrate a concept, not the company's proprietary production formula.</p></article><aside class="card"><p class="eyebrow">WORKFLOW</p><h2>From file to insight</h2><ol class="steps"><li>Import CSV</li><li>Validate and normalize rows</li><li>Calculate transparent indicators</li><li>Append a period and save a snapshot</li></ol><label class="file-label">Import synthetic CSV<input id="csv-file" type="file" accept=".csv,text/csv"></label><button id="validate" class="button">Validate sample</button><button id="apply-update" class="button" disabled>Apply validated update</button><button id="simulate" class="button secondary">Simulate invalid import</button><p id="validation" class="validation">Ready for a reproducible demo update.</p></aside></section>
+    <section class="card"><div class="section-heading"><div><p class="eyebrow">EXPLORER</p><h2>Products requiring attention</h2></div><span id="status" class="muted"></span></div><div class="table-wrap"><table><thead><tr><th>Product</th><th>Brand</th><th>Category</th><th>ITD</th><th>IRI</th><th>Quadrant</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+    <section class="story"><div><p class="eyebrow">WHY IT MATTERS</p><h2>Business Expert → ChatGPT → Complex Workflows → Codex + GitHub → Continuous Improvement</h2></div><p>A domain expert can direct a technical workflow through clear questions, explicit decisions, reproducible data, tests and evidence — without claiming to be a software engineer.</p></section>
+  </main>
+  <div id="detail-panel" class="detail-panel"><div id="detail"></div></div>
+  <footer>GB Matrix public demonstration · synthetic data · reproducible seed 20261026</footer>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
