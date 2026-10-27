@@ -4,7 +4,7 @@
 
 ## Executive summary (for reviewers)
 
-Pablo Atienza, an Argentine marketing and business-intelligence professional with 25+ years of experience, directed the creation of **GB Matrix**, a working multi-brand portfolio decision artifact with ChatGPT. Its original implementation combines demand traction (ITD), inventory relevance (IRI), alternative-model comparison, backtesting, source reconciliation, detailed product views and complementary SKU/family-level analysis. One consequential human decision—using identifiers together with normalized product descriptions to define commercially meaningful families—became a second view in the private artifact. Codex subsequently built a **separate, public, reproducible implementation** using 800 synthetic products, 12 periods, modular JavaScript, CSV updates, **13 passing tests**, a successful CI pipeline, reviewable commits and a pull request. The Content Path proposal is a monthly Spanish/English series showing how business experts can direct, verify and maintain software, with technical results anyone can inspect.
+Pablo Atienza, an Argentine marketing and business-intelligence professional with 25+ years of experience, directed the creation of **GB Matrix**, a working multi-brand portfolio decision artifact with ChatGPT. Its original implementation combines demand traction (ITD), inventory relevance (IRI), alternative-model comparison, backtesting, source reconciliation, detailed product views and complementary SKU/family-level analysis. One consequential human decision—using identifiers together with normalized product descriptions to define commercially meaningful families—became a second view in the private artifact. Codex subsequently built a **separate, public, reproducible implementation** using 800 synthetic products, 12 periods, modular JavaScript, CSV updates, **15 passing tests**, a successful CI pipeline, reviewable commits and a pull request. The Content Path proposal is a monthly Spanish/English series showing how business experts can direct, verify and maintain software, with technical results anyone can inspect.
 
 ## 1. The artifact: the business problem and system
 
@@ -33,9 +33,9 @@ The Codex project creates an independent, public demonstration rather than repub
 - Modular code and transparent, generic demo indicators for an ITD × IRI matrix.
 - An interactive scatterplot, filters, product detail, histories and review statuses.
 - A CSV validation/update workflow with period append and local snapshot preservation.
-- 13 recorded passing Node tests, syntax checks, a custom repository audit script, a successful GitHub Actions workflow, and documented commits and a PR.
+- 15 recorded passing Node tests, syntax checks, a custom repository audit script, a successful GitHub Actions workflow, and documented commits and a PR.
 
-**Exact boundaries:** family-resolution logic from the historical tool is not part of this synthetic demo. The native-browser CSV file-selection step still requires manual end-to-end checking; automated tests cover the parsing and update logic. The commercial original was created with ChatGPT, not with Codex. This case does not claim measured ROI or an independently verified Work-specific GB Matrix feature.
+**Exact boundaries:** family-resolution logic from the historical tool is not part of this synthetic demo. The native-browser CSV file-selection step still requires manual end-to-end checking; automated tests cover parsing, update logic and safe display of CSV-supplied text. The latest CI reports 15 passing tests and a custom audit of 38 files with zero pattern findings. The commercial original was created with ChatGPT, not with Codex. This case does not claim measured ROI or an independently verified Work-specific GB Matrix feature.
 
 ## 4. Evidence, status and provenance
 
@@ -44,7 +44,7 @@ The Codex project creates an independent, public demonstration rather than repub
 | Original portfolio decision artifact exists; includes indicator comparison, product drill-down and evidence treatment | Historical company workbooks / tools reviewed privately | Verified in private artifacts; not disclosed |
 | SKU and family views exist in the original | Historical private version and owner account | Verified historical design; brands anonymized |
 | Codex created an independent reproducible synthetic project | [Public repository](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public), [PR #2](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2) | Publicly auditable |
-| Test suite and CI passed | [Successful Actions run](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546), [test report](../TEST_REPORT.md) | CI success; 13 tests documented |
+| Test suite and CI passed | [Successful Actions run](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40451410979), [test report](../TEST_REPORT.md) | CI success; 13 tests documented |
 | Demonstration is published | [Live GitHub Pages](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) | Public |
 | Monthly educational contribution | [Tutorial 01 brief](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/issues/3) | Planned; not yet published |
 
@@ -58,6 +58,6 @@ The Codex project creates an independent, public demonstration rather than repub
 
 ## Links
 
-[Live demo](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Source](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public) · [PR #2](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2) · [CI](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40445413546) · [YouTube introduction](https://www.youtube.com/shorts/JTkRiMG96o4)
+[Live demo](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/) · [Source](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public) · [PR #2](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/pull/2) · [CI](https://github.com/mccpabloatienza-oss/gb-matrix-codex-public/actions/runs/40451410979) · [YouTube introduction](https://www.youtube.com/shorts/JTkRiMG96o4)
 
 *All demo data and formulas are synthetic and generic. Real brands, records, internal metric configurations and private product examples are excluded.*
