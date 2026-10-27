@@ -46,7 +46,7 @@ Open `http://localhost:8000`. Node.js LTS is required; no paid backend.
 
 ## Public examples of content and communication
 
-The candidate also supplied five earlier published Instagram/YouTube examples, curated separately from Codex engineering evidence. [**View the creator's portfolio and public content links**](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html).
+The candidate also supplied six earlier published Instagram/YouTube examples, curated separately from Codex engineering evidence. [**View the creator's portfolio and public content links**](https://mccpabloatienza-oss.github.io/gb-matrix-codex-public/creator-portfolio.html).
 
 ## For reviewers and learners
 
